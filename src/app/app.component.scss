@@ -1,0 +1,93 @@
+.container {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s linear;
+}
+
+.switcher {
+  &--box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 8rem;
+    height: 6rem;
+    margin-top: 2rem;
+  }
+
+  &--slider {
+    width: 100%;
+    position: relative;
+  }
+
+  &--track {
+    position: absolute;
+    height: 2rem;
+    width: 8rem;
+    border-radius: 2rem;
+    background-color: inherit;
+    background-color: currentcolor;
+  }
+
+  &--handle {
+    width: 2rem;
+    height: 2rem;
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(188, 184, 177, 1) 100%);
+    position: absolute;
+    border-radius: 2rem;
+  }
+
+  &--themes {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    svg {
+      width: 2rem;
+      height: 2rem;
+      display: block;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+
+  &--light {
+    animation: toLeft 0.5s linear;
+    left: 0rem;
+  }
+
+  &--dark {
+    animation: toRight 0.5s linear;
+    right: 0rem;
+  }
+}
+
+@keyframes toRight {
+  from {
+    right: 6rem
+  }
+
+  to {
+    right: 0rem
+  }
+}
+
+@keyframes toLeft {
+  from {
+    left: 6rem
+  }
+
+  to {
+    left: 0rem
+  }
+}
