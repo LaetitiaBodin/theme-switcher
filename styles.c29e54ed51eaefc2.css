@@ -1,0 +1,1 @@
+*{margin:0;padding:0;font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif}:root [data-theme=light]{--color-primary: #e0afa0;--color-secondary: #0b090a}:root [data-theme=dark]{--color-primary: #161a1d;--color-secondary: #e0afa0}:root [name=theme-color]{transition:all .5s linear}
